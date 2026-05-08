@@ -55,7 +55,7 @@ function Divider() {
 }
 
 /* Persona diagram */
-function PersonaGrid({ personas }: { personas: { name: string; desc: string; img: string }[] }) {
+function PersonaGrid({ personas = [] }: { personas?: { name: string; desc: string; img: string }[] }) {
   // viewBox: 1000 wide, 60 tall. 4 cols centered at 125, 375, 625, 875
   const W = 1000;
   const topY = 10;
@@ -99,7 +99,7 @@ function PersonaGrid({ personas }: { personas: { name: string; desc: string; img
 }
 
 /* Three-column takeaway cards */
-function TakeawayGrid({ items }: { items: { title: string; body: string }[] }) {
+function TakeawayGrid({ items = [] }: { items?: { title: string; body: string }[] }) {
   return (
     <div className={styles.takeawayGrid} data-stagger>
       {items.map(({ title, body }) => (
@@ -152,7 +152,7 @@ function VUBentoGrid() {
 }
 
 /* Before/after comparison grid */
-function BeforeAfterGrid({ rows }: { rows: { beforeImg: string; beforeDesc: string; afterImg: string; afterDesc: string }[] }) {
+function BeforeAfterGrid({ rows = [] }: { rows?: { beforeImg: string; beforeDesc: string; afterImg: string; afterDesc: string }[] }) {
   return (
     <div className={styles.beforeAfterGrid}>
       {rows.map((row, i) => (
@@ -182,7 +182,7 @@ function BeforeAfterGrid({ rows }: { rows: { beforeImg: string; beforeDesc: stri
 }
 
 /* Two-column flow breakdown */
-function FlowColumns({ columns }: { columns: { label: string; img: string; desc: string }[] }) {
+function FlowColumns({ columns = [] }: { columns?: { label: string; img: string; desc: string }[] }) {
   return (
     <div className={styles.flowColumns}>
       {columns.map(({ label, img, desc }) => (

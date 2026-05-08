@@ -8,10 +8,10 @@ interface FeatureItem {
 }
 
 interface Props {
-  items: FeatureItem[];
+  items?: FeatureItem[];
 }
 
-export default function VideoFeatureList({ items }: Props) {
+export default function VideoFeatureList({ items = [] }: Props) {
   return (
     <div className={styles.list}>
       {items.map(({ video, image, title, description }, i) => (
