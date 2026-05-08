@@ -1,0 +1,32 @@
+.track {
+  overflow: hidden;
+  width: 100vw;
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-10);
+  margin-left: calc(50% - 50vw);
+}
+
+.inner {
+  display: flex;
+  gap: var(--space-4);
+  width: max-content;
+  animation: scroll 60s linear infinite;
+}
+
+.inner:hover {
+  animation-play-state: paused;
+}
+
+.image {
+  height: 360px;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

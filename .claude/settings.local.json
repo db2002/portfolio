@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(echo \"Started with PID $!\")",
+      "Bash(grep -E \"^[a-zA-Z][a-zA-Z0-9 _-]+$\")",
+      "Bash(md5 /Users/diyabhatia/Desktop/portfolio/public/images/animation-light-mode.riv /Users/diyabhatia/Desktop/portfolio/public/images/animation-dark-mode.riv)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(bash dev.sh)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(grep -l \"company\\\\|type\" /Users/diyabhatia/Desktop/portfolio/content/case-studies/*.mdx)",
+      "Bash(/usr/local/bin/npm install:*)",
+      "Bash(/opt/homebrew/bin/npm install:*)",
+      "Bash(ls -la /Users/diyabhatia/Desktop/portfolio/public/images/brand-*.png)",
+      "Bash(curl -s http://localhost:3001/work/beauty-playbook)",
+      "Bash(/Users/diyabhatia/.nvm/versions/node/v24.14.1/bin/npm uninstall:*)",
+      "WebFetch(domain:www.goodreads.com)"
+    ]
+  }
+}

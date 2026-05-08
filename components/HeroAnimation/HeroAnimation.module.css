@@ -1,0 +1,9 @@
+.clip {
+  overflow: hidden;
+}
+
+/* SplitType wraps lines in divs — clip each line */
+.clip :global(.line) {
+  overflow: hidden;
+  padding-bottom: 0.1em;
+}

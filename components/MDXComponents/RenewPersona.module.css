@@ -1,0 +1,231 @@
+.card {
+  margin: var(--space-16) 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-8);
+  background: var(--color-bg);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--color-bg-secondary);
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-tight);
+  color: var(--renew-purple);
+  margin: 0 0 2px;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1;
+}
+
+/* ── Bio + lists ─────────────────────────────────────────── */
+.bioRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-8);
+  padding: var(--space-6) var(--space-8);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.bioSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.listsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.sectionLabel {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--renew-purple);
+  margin: 0 0 var(--space-2);
+}
+
+.body {
+  font-size: var(--text-sm);
+  line-height: var(--leading-loose);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.list {
+  margin: 0;
+  padding-left: var(--space-4);
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.list li {
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+}
+
+/* ── Purple footer strip ─────────────────────────────────── */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  padding: var(--space-6) var(--space-8);
+  background: var(--color-bg);
+  align-items: start;
+  border-top: 1px solid var(--color-border);
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sideLabel {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  color: var(--renew-purple);
+  margin: 0;
+}
+
+/* ── Experience bars ─────────────────────────────────────── */
+.barItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.barLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.barTrack {
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--renew-purple);
+  border-radius: 99px;
+}
+
+/* ── Brands ──────────────────────────────────────────────── */
+.brands {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.brandText {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+}
+
+.brandTextSans {
+  font-family: var(--font-body, sans-serif);
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.02em;
+}
+
+/* ── Quote ───────────────────────────────────────────────── */
+.footerDivider {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: var(--color-border);
+  margin: 0 calc(-1 * var(--space-8));
+}
+
+.quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  grid-column: 1 / -1;
+}
+
+.quoteMarks {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--renew-purple);
+  display: block;
+  margin-bottom: -8px;
+}
+
+.quoteBody {
+  font-size: var(--text-sm);
+  line-height: var(--leading-loose);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .bioRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .listsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}

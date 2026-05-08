@@ -1,0 +1,96 @@
+.card {
+  margin: var(--space-16) 0;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.goal {
+  font-size: var(--text-md);
+  color: var(--color-text-primary);
+  font-weight: var(--weight-regular);
+}
+
+/* ── Flat grid — rows drive height alignment ─────────────── */
+.stages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--space-4);
+  align-items: stretch;
+}
+
+/* ── Stage header pills ──────────────────────────────────── */
+.stageHeader {
+  background: var(--renew-purple);
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-align: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-1);
+  align-self: start;
+}
+
+/* ── Content cells ───────────────────────────────────────── */
+.cell {
+  padding: var(--space-4) var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sectionLabel {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--renew-purple);
+  margin: 0;
+}
+
+.cellText {
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: var(--space-4);
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.bullets li {
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+}
+
+/* ── Full-width row dividers ─────────────────────────────── */
+.rowDivider {
+  grid-column: 1 / -1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .card {
+    overflow-x: auto;
+  }
+
+  .stages {
+    min-width: 580px;
+  }
+}

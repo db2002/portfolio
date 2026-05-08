@@ -1,0 +1,192 @@
+.figure {
+  margin: var(--space-16) 0;
+}
+
+/* ── Outer layout: [left-label] [chart-col] [right-label] ── */
+.outer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.chartCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+/* ── Side axis labels ────────────────────────────────────── */
+.sideAxis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.sideLeft  .axisLabel { transform: rotate(180deg); }
+.sideRight .axisLabel { transform: rotate(0deg); }
+
+.sideAxis .axisLabel {
+  writing-mode: vertical-rl;
+  font-size: var(--text-sm);
+  color: var(--renew-purple);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* ── Top/bottom axis labels ──────────────────────────────── */
+.topAxis,
+.bottomAxis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topAxis .axisLabel,
+.bottomAxis .axisLabel {
+  font-size: var(--text-sm);
+  color: var(--renew-purple);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.01em;
+}
+
+/* ── Matrix grid ─────────────────────────────────────────── */
+.matrix {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+
+.vLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.hLine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ── Points ──────────────────────────────────────────────── */
+.point {
+  position: absolute;
+  transform: translate(-50%, 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ReNew highlight sits slightly above its center so label shows */
+.pointHighlight {
+  align-items: center;
+}
+
+/* ── App icon ─────────────────────────────────────────────── */
+.icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.iconImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── ReNew highlight circle ──────────────────────────────── */
+.highlightWrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+}
+
+.highlightCircle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(167, 159, 210, 0.25);
+  border: 1.5px solid rgba(91, 91, 166, 0.2);
+}
+
+.highlightDot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--renew-purple);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.highlightDot::before,
+.highlightDot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--renew-purple);
+  animation: ripple 3.5s ease-out infinite;
+}
+
+.highlightDot::after {
+  animation-delay: 1.75s;
+}
+
+@keyframes ripple {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* ── Labels ──────────────────────────────────────────────── */
+.label {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.labelHighlight {
+  font-size: 11px;
+  color: var(--renew-purple);
+  font-weight: var(--weight-medium);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .highlightWrap {
+    width: 90px;
+    height: 90px;
+  }
+
+  .highlightDot {
+    width: 10px;
+    height: 10px;
+  }
+}

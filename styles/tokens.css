@@ -1,0 +1,184 @@
+/* ============================================================
+   DESIGN TOKENS
+   All CSS custom properties for the portfolio design system.
+   Light mode is the default; dark mode overrides via media query.
+   ============================================================ */
+
+:root {
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-display: 'EB Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  --text-xs:    0.75rem;   /* 12px */
+  --text-sm:    0.875rem;  /* 14px */
+  --text-base:  1rem;      /* 16px */
+  --text-md:    1.125rem;  /* 18px */
+  --text-lg:    1.25rem;   /* 20px */
+  --text-xl:    1.5rem;    /* 24px */
+  --text-2xl:   2rem;      /* 32px */
+  --text-3xl:   2.5rem;    /* 40px */
+  --text-4xl:   3rem;    /* 56px */
+  --text-5xl:   3.5rem;      /* 80px */
+
+  --leading-tight:  1.15;
+  --leading-snug:   1.35;
+  --leading-normal: 1.6;
+  --leading-loose:  1.8;
+
+  --tracking-tight:  -0.03em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.06em;
+  --tracking-wider:   0.12em;
+
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold: 600;
+  --weight-bold:    700;
+  --weight-extrabold: 800;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --space-1:   0.25rem;  /* 4px  */
+  --space-2:   0.5rem;   /* 8px  */
+  --space-3:   0.75rem;  /* 12px */
+  --space-4:   1rem;     /* 16px */
+  --space-5:   1.25rem;  /* 20px */
+  --space-6:   1.5rem;   /* 24px */
+  --space-8:   2rem;     /* 32px */
+  --space-10:  2.5rem;   /* 40px */
+  --space-12:  3rem;     /* 48px */
+  --space-16:  4rem;     /* 64px */
+  --space-20:  5rem;     /* 80px */
+  --space-24:  6rem;     /* 96px */
+  --space-32:  8rem;     /* 128px */
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --max-width-content: 680px;
+  --max-width-wide:    960px;
+  --max-width-full:    1440px;
+  --nav-height:        64px;
+
+  /* ── Border radius ───────────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.4, 0, 1, 1);
+  --ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --duration-fast:   120ms;
+  --duration-base:   220ms;
+  --duration-slow:   400ms;
+  --duration-page:   300ms;
+
+  /* ── Z-index ─────────────────────────────────────────────── */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-nav:     200;
+  --z-modal:   300;
+
+  /* ── Light mode colors ───────────────────────────────────── */
+
+  /* Surface */
+  --color-bg:            #F7F6F3;
+  --color-bg-secondary:  #EFEEE9;
+  --color-bg-tertiary:   #E5E4DF;
+  --color-surface:       #FFFFFF;
+  --color-surface-raised:#FAFAF8;
+
+  /* Text */
+  --color-text-primary:   #111110;
+  --color-text-secondary: #5C5B57;
+  --color-text-tertiary:  #8E8D89;
+  --color-text-inverse:   #F7F6F3;
+
+  /* Border */
+  --color-border:        rgba(17, 17, 16, 0.1);
+  --color-border-strong: rgba(17, 17, 16, 0.2);
+
+  /* Accent — electric violet */
+  --color-accent:         #5a6638;
+  --color-accent-hover:   #47511d;
+  --color-accent-subtle:  rgba(90, 102, 56, 0.08);
+  --color-accent-text:    #5a6638;
+
+  /* Feedback */
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error:   #DC2626;
+
+  /* ── Beauty Playbook project colors ─────────────────────── */
+  --bp-trade:     #ddcdc4;
+  --bp-highlight: #a89ea8;
+
+  /* ── ReNew project colors ────────────────────────────────── */
+  --renew-purple: #5B5BA6;
+}
+
+/* ── Dark mode — system preference (only when no manual override) ── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* Surface */
+    --color-bg:            #1C1C1A;
+    --color-bg-secondary:  #161614;
+    --color-bg-tertiary:   #1E1E1B;
+    --color-surface:       #1A1A17;
+    --color-surface-raised:#222220;
+
+    /* Text */
+    --color-text-primary:   #F2F1EE;
+    --color-text-secondary: #9B9A95;
+    --color-text-tertiary:  #818079;
+    --color-text-inverse:   #111110;
+
+    /* Border */
+    --color-border:        rgba(242, 241, 238, 0.08);
+    --color-border-strong: rgba(242, 241, 238, 0.15);
+
+    /* Accent — matched to light mode for white text accessibility */
+    --color-accent:        #5a6638;
+    --color-accent-hover:  #47511d;
+    --color-accent-subtle: rgba(90, 102, 56, 0.12);
+    --color-accent-text:   #8a9e62;
+
+    /* Beauty Playbook — darkened for dark bg legibility */
+    --bp-trade:     #ddcdc4;
+    --bp-highlight: #A89EA8;
+
+    /* ReNew — lightened for dark bg legibility (passes WCAG AA on #1C1C1A) */
+    --renew-purple: #7E7EC2;
+  }
+}
+
+/* ── Forced dark (manual toggle) ─────────────────────────── */
+[data-theme="dark"] {
+  --color-bg:            #0E0E0C;
+  --color-bg-secondary:  #161614;
+  --color-bg-tertiary:   #1E1E1B;
+  --color-surface:       #1A1A17;
+  --color-surface-raised:#222220;
+
+  --color-text-primary:   #F2F1EE;
+  --color-text-secondary: #9B9A95;
+  --color-text-tertiary:  #6B6A66;
+  --color-text-inverse:   #111110;
+
+  --color-border:        rgba(242, 241, 238, 0.08);
+  --color-border-strong: rgba(242, 241, 238, 0.15);
+
+  --color-accent:        #5a6638;
+  --color-accent-hover:  #47511d;
+  --color-accent-subtle: rgba(90, 102, 56, 0.12);
+  --color-accent-text:   #8a9e62;
+
+  /* Beauty Playbook — darkened for dark bg legibility */
+  --bp-trade:     #ddcdc4;
+  --bp-highlight: #A89EA8;
+
+  /* ReNew — lightened for dark bg legibility (passes WCAG AA on #0E0E0C) */
+  --renew-purple: #7E7EC2;
+}
