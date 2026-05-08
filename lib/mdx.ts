@@ -21,6 +21,7 @@ export interface CaseStudyMeta {
   teams?:       string[];
   tools?:       string[];
   timeline?:    string;
+  order?:       number;
 }
 
 export interface CaseStudyFull extends CaseStudyMeta {
