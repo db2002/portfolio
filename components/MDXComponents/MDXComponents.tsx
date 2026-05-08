@@ -36,7 +36,7 @@ function ImageGrid({ children }: { children: React.ReactNode }) {
 }
 
 /* Metadata row (role, timeline, tools) */
-function MetaRow({ items }: { items: { label: string; value: string }[] }) {
+function MetaRow({ items = [] }: { items?: { label: string; value: string }[] }) {
   return (
     <dl className={styles.metaRow}>
       {items.map(({ label, value }) => (

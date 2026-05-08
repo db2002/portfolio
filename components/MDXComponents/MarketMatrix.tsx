@@ -12,7 +12,7 @@ interface Props {
   xLabel?: string;
   yLabel?: string;
   quadrants?: [string, string, string, string];
-  points: Point[];
+  points?: Point[];
 }
 
 const GROUP_COLORS: Record<Point['group'], string> = {
@@ -27,7 +27,7 @@ export default function MarketMatrix({
   xLabel = 'Engagement',
   yLabel = 'Content quality',
   quadrants = ['QUALITY SPECIALISTS', 'INDUSTRY LEADERS', 'EMERGING PLAYERS', 'ENGAGEMENT-FOCUSED'],
-  points,
+  points = [],
 }: Props) {
   return (
     <figure className={styles.figure}>

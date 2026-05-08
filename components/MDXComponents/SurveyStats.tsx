@@ -63,10 +63,10 @@ function StatItem({ stat, animate }: { stat: Stat; animate: boolean }) {
 }
 
 interface SurveyStatsProps {
-  stats: Stat[];
+  stats?: Stat[];
 }
 
-export default function SurveyStats({ stats }: SurveyStatsProps) {
+export default function SurveyStats({ stats = [] }: SurveyStatsProps) {
   const [animate, setAnimate] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
