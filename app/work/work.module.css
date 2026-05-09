@@ -105,6 +105,11 @@
     padding: var(--space-16) var(--space-4) 0;
   }
 
+  .hero {
+    padding-bottom: var(--space-10);
+    margin-bottom: var(--space-8);
+  }
+
   .heroSub {
     max-width: 100%;
   }

@@ -42,7 +42,16 @@ export default function WorkGridModal({ studies, metas, bodies }: Props) {
   const [openSlug,      setOpenSlug]      = useState<string | null>(null);
   const [openKey,       setOpenKey]       = useState(0);
   const [backdropReady, setBackdropReady] = useState(false);
+  const [isMobile,      setIsMobile]      = useState(false);
   const openSlugRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1023px)');
+    setIsMobile(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
 
   function open(slug: string) {
     openSlugRef.current = slug;
@@ -118,6 +127,23 @@ export default function WorkGridModal({ studies, metas, bodies }: Props) {
                 className={`${gridStyles.card} ${s.featured ? gridStyles.featured : ''}`}
                 aria-label={`Visit website: ${s.title}`}
                 data-cursor="visit"
+                custom={i}
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {cardContent}
+              </motion.a>
+            );
+          }
+
+          if (isMobile) {
+            return (
+              <motion.a
+                key={s.slug}
+                href={`/work/${s.slug}`}
+                className={`${gridStyles.card} ${s.featured ? gridStyles.featured : ''}`}
+                aria-label={`View case study: ${s.title}`}
                 custom={i}
                 variants={cardVariants}
                 initial="hidden"
