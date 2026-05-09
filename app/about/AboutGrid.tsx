@@ -79,7 +79,7 @@ export default function AboutGrid() {
               Let&apos;s connect!
             </a>
             <a
-              href="/diya-bhatia-resume.pdf"
+              href="/DiyaBhatia-Resume.pdf"
               className={styles.ctaSecondary}
               target="_blank"
               rel="noopener noreferrer"
