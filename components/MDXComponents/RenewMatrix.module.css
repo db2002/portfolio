@@ -174,7 +174,7 @@
   text-align: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .icon {
     width: 36px;
     height: 36px;
@@ -188,5 +188,50 @@
   .highlightDot {
     width: 10px;
     height: 10px;
+  }
+
+  .sideAxis .axisLabel,
+  .topAxis .axisLabel,
+  .bottomAxis .axisLabel {
+    font-size: var(--text-xs);
+  }
+
+  .point {
+    gap: 3px;
+  }
+
+  .label,
+  .labelHighlight {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .highlightWrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .highlightDot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .sideAxis {
+    width: 16px;
+  }
+
+  .point {
+    gap: 2px;
+  }
+
+  .label,
+  .labelHighlight {
+    font-size: 7px;
   }
 }
