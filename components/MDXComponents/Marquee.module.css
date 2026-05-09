@@ -27,6 +27,22 @@
 }
 
 @media (max-width: 768px) {
+  .track {
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .inner {
+    animation: none;
+  }
+
   .image {
     height: 200px;
   }
