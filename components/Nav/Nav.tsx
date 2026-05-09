@@ -7,7 +7,7 @@ import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 import styles from './Nav.module.css';
 
 const navLinks = [
-  { href: '/work',  label: 'Work'  },
+  { href: '/',      label: 'Work'  },
   { href: '/play',  label: 'Play'  },
   { href: '/about', label: 'About' },
 ];
@@ -20,8 +20,8 @@ export default function Nav() {
 
   useEffect(() => {
     const activeIndex = navLinks.findIndex(({ href }) =>
-      href === '/work'
-        ? pathname === '/work' || pathname.startsWith('/work/')
+      href === '/'
+        ? pathname === '/' || pathname.startsWith('/work/')
         : pathname.startsWith(href)
     );
     const list = listRef.current;
@@ -46,8 +46,8 @@ export default function Nav() {
           )}
           {navLinks.map(({ href, label }, i) => {
             const isActive =
-              href === '/work'
-                ? pathname === '/work' || pathname.startsWith('/work/')
+              href === '/'
+                ? pathname === '/' || pathname.startsWith('/work/')
                 : pathname.startsWith(href);
             return (
               <li key={href}>
