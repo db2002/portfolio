@@ -46,3 +46,13 @@
 .link:hover {
   opacity: 0.7;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .code {
+    opacity: 0.55;
+  }
+}
+
+[data-theme="dark"] .code {
+  opacity: 0.55;
+}
