@@ -46,9 +46,7 @@
 }
 
 .currentLink {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
+  display: inline;
   color: inherit;
   transition: color var(--duration-base) var(--ease-out);
 }
@@ -58,7 +56,9 @@
 }
 
 .currentArrow {
-  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: var(--space-2);
   transform: translate(0, 0);
   transition: transform var(--duration-base) var(--ease-out);
 }
