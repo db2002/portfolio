@@ -110,9 +110,11 @@ export default function WorkGridModal({ studies, metas, bodies }: Props) {
               </div>
               <div className={gridStyles.titleRow}>
                 <h2 className={gridStyles.title}>{s.cardTitle ?? s.title}</h2>
-                <span className={gridStyles.meta}>
-                  {[s.company, s.year, s.type].filter(Boolean).join(' · ')}
-                </span>
+                <div className={gridStyles.metaStack}>
+                  {[s.company, s.year, s.type].filter(Boolean).map((item, idx) => (
+                    <span key={idx} className={gridStyles.meta}>{item}</span>
+                  ))}
+                </div>
               </div>
             </>
           );

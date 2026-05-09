@@ -23,7 +23,7 @@
 .heroAnimationInline {
   display: inline-block;
   vertical-align: -0.15em;
-  margin-right: 0.2em;
+  margin-right: 0.1em;
 }
 
 .heroSub {
@@ -108,7 +108,7 @@
 
 @media (max-width: 768px) {
   .page {
-    padding: var(--space-16) var(--space-4) 0;
+    padding: var(--space-8) var(--space-4) 0;
   }
 
   .hero {
@@ -118,7 +118,19 @@
 
   .heroSub {
     max-width: 100%;
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
+  }
+
+  .heroCurrent {
+    font-size: var(--text-base);
+  }
+
+  .currentLink:hover {
+    color: inherit;
+  }
+
+  .currentLink:hover .currentArrow {
+    transform: translate(0, 0);
   }
 
   .headline {

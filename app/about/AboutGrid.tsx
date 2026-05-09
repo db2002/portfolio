@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import styles from './about.module.css';
 
@@ -12,6 +12,15 @@ const StickerSpawner = dynamic(() => import('@/components/StickerSpawner/Sticker
 export default function AboutGrid() {
   const gridRef = useRef<HTMLDivElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    setIsDesktop(mq.matches);
+    const onChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -32,7 +41,7 @@ export default function AboutGrid() {
 
   return (
     <div ref={gridRef} className={styles.grid}>
-      <StickerSpawner />
+      {isDesktop && <StickerSpawner />}
 
       {/* ── Photo ───────────────────────────────────────── */}
       <aside className={styles.photo}>
@@ -66,7 +75,7 @@ export default function AboutGrid() {
           </p>
 
           <div className={styles.ctas} data-ctas>
-            <a href="mailto:hello@diyabhatia.com" className={styles.ctaPrimary}>
+            <a href="https://www.linkedin.com/in/diyabhatia/" className={styles.ctaPrimary} target="_blank" rel="noopener noreferrer">
               Let&apos;s connect!
             </a>
             <a

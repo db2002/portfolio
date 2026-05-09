@@ -151,3 +151,23 @@
   white-space: nowrap;
   line-height: 1;
 }
+
+@media (max-width: 768px) {
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .label {
+    font-size: 8px;
+  }
+
+  .quadrant {
+    font-size: 7px;
+    max-width: 72px;
+  }
+
+  .point {
+    gap: 3px;
+  }
+}

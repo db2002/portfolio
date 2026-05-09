@@ -14,6 +14,7 @@
 
 /* ── Video ───────────────────────────────────────────────── */
 .videoWrap {
+  position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: var(--color-bg-secondary);
@@ -24,6 +25,8 @@
 }
 
 .video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -55,14 +58,20 @@
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .row {
     grid-template-columns: 1fr;
     gap: var(--space-6);
+    justify-items: center;
+    text-align: center;
   }
 
   .videoWrap {
     max-width: 240px;
-    justify-self: start;
+    justify-self: center;
+  }
+
+  .text {
+    align-items: center;
   }
 }

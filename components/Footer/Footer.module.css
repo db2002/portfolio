@@ -101,6 +101,24 @@
 }
 
 /* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer {
+    margin-top: var(--space-8);
+  }
+
+  .link:hover {
+    color: var(--color-text-secondary);
+  }
+
+  .link:hover .arrow {
+    transform: translate(0, 0);
+  }
+
+  .cta:hover {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 640px) {
   .inner {
     flex-direction: column;

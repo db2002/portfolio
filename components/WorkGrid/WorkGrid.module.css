@@ -64,6 +64,14 @@
   font-size: var(--text-xl);
 }
 
+.metaStack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+
 .meta {
   font-family: var(--font-body);
   font-size: var(--text-xs);
@@ -72,11 +80,35 @@
   text-transform: uppercase;
   color: var(--color-text-tertiary);
   white-space: nowrap;
-  flex-shrink: 0;
+}
+
+.meta:not(:first-child)::before {
+  content: '·';
+  padding: 0 0.35em;
+}
+
+@media (max-width: 1023px) {
+  .titleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
 }
 
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: var(--text-md);
+  }
+
+  .featured .title {
+    font-size: var(--text-lg);
+  }
+
+  .card:hover .image {
+    transform: none;
   }
 }

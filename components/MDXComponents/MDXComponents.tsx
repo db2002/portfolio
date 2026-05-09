@@ -12,6 +12,7 @@ import RenewMatrix from './RenewMatrix';
 import RenewPersona from './RenewPersona';
 import RenewJourney from './RenewJourney';
 import VideoFeatureList from './VideoFeatureList';
+import RenewVideoList from './RenewVideoList';
 
 /* Pull quote */
 function Callout({ children }: { children: React.ReactNode }) {
@@ -236,6 +237,7 @@ export const mdxComponents: MDXComponentsType = {
   RenewPersona,
   RenewJourney,
   VideoFeatureList,
+  RenewVideoList,
 
   /* HTML overrides */
   h1: (props) => <h1 className={styles.h1} {...props} />,

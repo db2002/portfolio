@@ -6,7 +6,7 @@ import styles from './ThemeToggle.module.css';
 type Theme = 'light' | 'dark';
 
 function getSystemTheme(): Theme {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return 'light';
 }
 
 function getStoredTheme(): Theme | null {

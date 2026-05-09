@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './RenewJourney.module.css';
 
 const journeyData = [
@@ -56,40 +58,32 @@ export default function RenewJourney() {
       </div>
 
       <div className={styles.stages} data-no-reveal>
-        {/* Stage header row */}
-        {journeyData.map(({ stage }) => (
-          <div key={stage} className={styles.stageHeader}>{stage.toUpperCase()}</div>
-        ))}
+        {journeyData.map(({ stage, action, thoughts, opportunities }) => (
+          <div key={stage} className={styles.stageGroup}>
+            <div className={styles.stageHeader}>{stage.toUpperCase()}</div>
 
-        {/* Actions row */}
-        {journeyData.map(({ stage, action }) => (
-          <div key={stage} className={styles.cell}>
-            <p className={styles.sectionLabel}>Actions</p>
-            <p className={styles.cellText}>{action}</p>
-          </div>
-        ))}
+            <div className={styles.cell}>
+              <p className={styles.sectionLabel}>Actions</p>
+              <p className={styles.cellText}>{action}</p>
+            </div>
 
-        <div className={styles.rowDivider} />
+            <div className={styles.rowDivider} />
 
-        {/* Thoughts row */}
-        {journeyData.map(({ stage, thoughts }) => (
-          <div key={stage} className={styles.cell}>
-            <p className={styles.sectionLabel}>Thoughts</p>
-            <ul className={styles.bullets}>
-              {thoughts.map((t, i) => <li key={i}>{t}</li>)}
-            </ul>
-          </div>
-        ))}
+            <div className={styles.cell}>
+              <p className={styles.sectionLabel}>Thoughts</p>
+              <ul className={styles.bullets}>
+                {thoughts.map((t, i) => <li key={i}>{t}</li>)}
+              </ul>
+            </div>
 
-        <div className={styles.rowDivider} />
+            <div className={styles.rowDivider} />
 
-        {/* Opportunities row */}
-        {journeyData.map(({ stage, opportunities }) => (
-          <div key={stage} className={styles.cell}>
-            <p className={styles.sectionLabel}>Opportunities</p>
-            <ul className={styles.bullets}>
-              {opportunities.map((o, i) => <li key={i}>{o}</li>)}
-            </ul>
+            <div className={styles.cell}>
+              <p className={styles.sectionLabel}>Opportunities</p>
+              <ul className={styles.bullets}>
+                {opportunities.map((o, i) => <li key={i}>{o}</li>)}
+              </ul>
+            </div>
           </div>
         ))}
       </div>

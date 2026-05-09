@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './about.module.css';
 import AboutGrid from './AboutGrid';
 
-const SpotifyEmbed = dynamic(() => import('@/components/SpotifyEmbed/SpotifyEmbed'), { ssr: false });
+const VinylPlayer = dynamic(() => import('@/components/VinylPlayer/VinylPlayer'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'About',
@@ -56,7 +56,7 @@ export default function AboutPage() {
 
           <div className={styles.shelfSpotify}>
             <h2 className={styles.shelfHeading}>Currently listening to</h2>
-            <SpotifyEmbed />
+            <VinylPlayer />
           </div>
         </div>
       </div>

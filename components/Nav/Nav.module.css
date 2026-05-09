@@ -97,6 +97,16 @@
 }
 
 /* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav {
+    gap: var(--space-2);
+  }
+
+  .link:not(.linkActive):hover {
+    color: var(--color-text-secondary);
+  }
+}
+
 @media (max-width: 480px) {
   .wordmark {
     padding: var(--space-2);

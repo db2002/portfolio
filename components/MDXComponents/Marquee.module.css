@@ -26,6 +26,12 @@
   display: block;
 }
 
+@media (max-width: 768px) {
+  .image {
+    height: 200px;
+  }
+}
+
 @keyframes scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }

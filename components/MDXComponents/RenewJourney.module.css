@@ -16,12 +16,17 @@
   font-weight: var(--weight-regular);
 }
 
-/* ── Flat grid — rows drive height alignment ─────────────── */
+/* ── 4-column grid on desktop ────────────────────────────── */
 .stages {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: var(--space-4);
-  align-items: stretch;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.stageGroup {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ── Stage header pills ──────────────────────────────────── */
@@ -77,20 +82,15 @@
   color: var(--color-text-secondary);
 }
 
-/* ── Full-width row dividers ─────────────────────────────── */
+/* ── Row dividers (within each stage group) ──────────────── */
 .rowDivider {
-  grid-column: 1 / -1;
   height: 1px;
   background: var(--color-border);
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .card {
-    overflow-x: auto;
-  }
-
   .stages {
-    min-width: 580px;
+    grid-template-columns: 1fr;
   }
 }
