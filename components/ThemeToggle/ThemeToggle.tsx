@@ -11,7 +11,7 @@ function getSystemTheme(): Theme {
 
 function getStoredTheme(): Theme | null {
   try {
-    return localStorage.getItem('theme') as Theme | null;
+    return localStorage.getItem('theme-v2') as Theme | null;
   } catch {
     return null;
   }
@@ -30,7 +30,7 @@ export default function ThemeToggle() {
     const next: Theme = theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
     document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch {}
+    try { localStorage.setItem('theme-v2', next); } catch {}
   }
 
   // Sync data-theme attribute whenever theme state changes
