@@ -105,6 +105,10 @@
     padding: var(--space-16) var(--space-4) 0;
   }
 
+  .heroSub {
+    max-width: 100%;
+  }
+
   .headline {
     font-size: var(--text-3xl);
   }
