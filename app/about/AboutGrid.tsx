@@ -71,7 +71,7 @@ export default function AboutGrid() {
             I hold a Bachelor&apos;s in Industrial Design, which has shaped how I think about people, products, and what makes an interaction feel intentional. (I also developed an obsession with MCM chairs, but that's between me and my bank account.)
           </p>
           <p>
-            When I&apos;m not in pixels, I&apos;m usually at the pottery studio, mid-crochet with a good TV show on, or halfway through a book I swore I&apos;d finish by book club. I&apos;m always open to chat!
+            When I&apos;m not in pixels, I&apos;m usually at the pottery studio, mid-crochet with a binge-worthy show on, or halfway through a book I swore I&apos;d finish by book club. I&apos;m always open to chat!
           </p>
 
           <div className={styles.ctas} data-ctas>
