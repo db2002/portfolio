@@ -14,8 +14,11 @@
 }
 
 .embedHost {
+  position: relative;
   width: 100%;
   max-width: 360px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 
 .embedHost iframe {

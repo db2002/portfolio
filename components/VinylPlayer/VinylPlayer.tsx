@@ -266,6 +266,9 @@ export default function VinylPlayer() {
     const setup = (IFrameAPI: any) => {
       if (!embedHostRef.current || controllerRef.current) return;
       const target = document.createElement('div');
+      target.style.position = 'relative';
+      target.style.overflow = 'hidden';
+      target.style.borderRadius = 'var(--radius-lg, 12px)';
       embedHostRef.current.innerHTML = '';
       embedHostRef.current.appendChild(target);
       IFrameAPI.createController(
@@ -309,7 +312,12 @@ export default function VinylPlayer() {
       <div className={styles.stage}>
         <Vinyl rotation={rotation} isDark={isDark} />
       </div>
-      <div className={styles.embedHost} ref={embedHostRef} />
+      <div
+        className={styles.embedHost}
+        ref={embedHostRef}
+        onMouseEnter={() => document.documentElement.setAttribute('data-hide-cursor', 'true')}
+        onMouseLeave={() => document.documentElement.removeAttribute('data-hide-cursor')}
+      />
     </div>
   );
 }
