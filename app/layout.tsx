@@ -7,7 +7,7 @@ import '@/styles/globals.css';
 export const metadata: Metadata = {
   title: {
     default:  'Diya Bhatia — UX & Product Designer',
-    template: '%s — Diya Bhatia',
+    template: 'Diya Bhatia — %s',
   },
   description:
     'UX and product designer crafting thoughtful, user-centred digital experiences. Available for full-time roles and freelance work.',
