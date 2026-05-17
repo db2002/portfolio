@@ -305,11 +305,7 @@ export default function VinylPlayer() {
   }, []);
 
   return (
-    <div
-      className={styles.wrap}
-      onMouseEnter={() => document.documentElement.setAttribute('data-hide-cursor', 'true')}
-      onMouseLeave={() => document.documentElement.removeAttribute('data-hide-cursor')}
-    >
+    <div className={styles.wrap}>
       <div className={styles.stage}>
         <Vinyl rotation={rotation} isDark={isDark} />
       </div>
