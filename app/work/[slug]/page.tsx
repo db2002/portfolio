@@ -84,7 +84,7 @@ export default function CaseStudyPage({ params }: Props) {
 
       {/* ── Body ─────────────────────────────────────────── */}
       <div className={styles.body}>
-        <MDXRemote source={study.content} components={mdxComponents} />
+        <MDXRemote source={study.content} components={mdxComponents} options={{ blockJS: false }} />
       </div>
     </ScrollReveal>
   );
