@@ -58,14 +58,14 @@ export default function AboutGrid() {
       <div className={styles.bio}>
         <HeroAnimation
           label="Hello, I'm Diya"
-          headline={<>I&apos;m a designer, ceramicist, crocheter, bookworm, and <em>explorer of the unknown.</em></>}
+          headline={<>I&apos;m a designer, ceramicist, knitter, bookworm, and <em>explorer of the unknown.</em></>}
           labelClassName={styles.name}
           headlineClassName={styles.headline}
         />
 
         <div ref={bodyRef} className={styles.bioBody}>
           <p>
-            My curiosity for human connection is at the heart of everything I make. I believe the best experiences spark a moment of joy. That&apos;s the thread I chase in every project.
+            My curiosity for human connection is at the heart of everything I make. I believe the best experiences spark a moment of joy.
           </p>
           <p>
             I hold a Bachelor&apos;s in Industrial Design, which has shaped how I think about people, products, and what makes an interaction feel intentional. (I also developed an obsession with MCM chairs, but that's between me and my bank account.)
