@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap');
 @import './tokens.css';
 
 /* ── Reset ─────────────────────────────────────────────────── */
@@ -8,7 +8,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: none !important;
+}
+
+/* Hide the system cursor only where the custom cursor is shown
+   (see Cursor.module.css). Below 1024px — tablet/phone — the normal
+   cursor and pointer affordances stay. */
+@media (min-width: 1024px) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
 }
 
 html {
@@ -35,7 +45,7 @@ body {
 /* ── Typography base ────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-semibold);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);
   color: var(--color-text-primary);

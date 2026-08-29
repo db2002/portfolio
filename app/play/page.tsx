@@ -57,7 +57,7 @@ export default function PlayPage() {
         {/* ── Left: headline + tabs ──────────────────────── */}
         <div className={styles.sidebar}>
           <HeroAnimation
-            headline={<>I like to explore different media, but <em>mostly</em> clay.</>}
+            headline={<>I like to explore different media, but mostly clay.</>}
             labelClassName={styles.name}
             headlineClassName={styles.headline}
           />

@@ -14,7 +14,7 @@ function ExperienceBar({ label, value }: { label: string; value: number }) {
 function NytLogo() {
   return (
     <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-label="New York Times">
-      <text x="16" y="26" textAnchor="middle" fontFamily="Georgia, Times New Roman, serif" fontSize="30" fontWeight="bold" fill="currentColor">𝔗</text>
+      <text x="16" y="26" textAnchor="middle" fontFamily="Georgia, Times New Roman, serif" fontSize="30" fontWeight={500} fill="currentColor">𝔗</text>
     </svg>
   );
 }

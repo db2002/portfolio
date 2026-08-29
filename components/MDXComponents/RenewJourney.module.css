@@ -11,7 +11,7 @@
 }
 
 .goal {
-  font-size: var(--text-md);
+  font-size: var(--text-base);
   color: var(--color-text-primary);
   font-weight: var(--weight-regular);
 }

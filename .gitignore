@@ -12,3 +12,6 @@ out/
 
 # OS
 .DS_Store
+
+# typescript incremental build info
+*.tsbuildinfo
