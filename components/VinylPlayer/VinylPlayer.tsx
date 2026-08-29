@@ -276,7 +276,7 @@ const TT_STYLUS_OFF = 3.6;
 const TT_STYLUS_R = 300;
 
 const TT_CSS = `
-.tt-fit{width:100%;max-width:${TT_W}px;position:relative}
+.tt-fit{width:100%;max-width:${TT_W}px;position:relative;overflow-x:clip}
 .tt{position:absolute;top:0;left:0;width:${TT_W}px;height:${TT_H}px;transform-origin:0 0}
 
 .tt-cast{position:absolute;left:22px;right:22px;top:34px;bottom:-6px;border-radius:20px;

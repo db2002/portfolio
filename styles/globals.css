@@ -27,10 +27,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 body {
   overflow-x: clip;
+  max-width: 100%;
   font-family: var(--font-body);
   font-size: var(--text-base);
   font-weight: var(--weight-regular);
