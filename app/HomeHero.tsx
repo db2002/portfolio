@@ -38,10 +38,13 @@ export default function HomeHero() {
           rel="noopener noreferrer"
           className={styles.currentLink}
         >
-          Currently designing web experiences at Vagaro
-          <svg className={styles.currentArrow} width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          Currently designing web experiences{' '}
+          <span style={{ whiteSpace: 'nowrap' }}>
+            at Vagaro
+            <svg className={styles.currentArrow} width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
         </a>
       </HeroAnimation>
     </div>
