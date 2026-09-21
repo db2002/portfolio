@@ -580,6 +580,7 @@
   }
 
   .h2 {
+    font-size: var(--text-lg);
     margin-top: var(--space-12);
     margin-bottom: var(--space-4);
   }
