@@ -201,12 +201,12 @@ function FlowColumns({ columns = [] }: { columns?: { label: string; img: string;
 }
 
 /* Light/dark themed image — shows srcLight in light mode, srcDark in dark mode */
-function ThemedImage({ srcLight, srcDark, alt, caption, aspect }: { srcLight: string; srcDark: string; alt: string; caption?: string; aspect?: string }) {
+function ThemedImage({ srcLight, srcDark, alt, caption, aspect, secondaryBg, alignBottom }: { srcLight: string; srcDark: string; alt: string; caption?: string; aspect?: string; secondaryBg?: boolean; alignBottom?: boolean }) {
   return (
     <figure className={styles.fullImage}>
-      <div className={styles.fullImageWrapper} style={{ ...(aspect ? { aspectRatio: aspect } : {}), backgroundColor: 'transparent' }}>
-        <Image src={srcLight} alt={alt} fill className={`${styles.fullImageImg} ${styles.themedLight}`} sizes="100vw" style={{ objectFit: 'contain' }} />
-        <Image src={srcDark}  alt={alt} fill className={`${styles.fullImageImg} ${styles.themedDark}`}  sizes="100vw" style={{ objectFit: 'contain' }} />
+      <div className={styles.fullImageWrapper} style={{ ...(aspect ? { aspectRatio: aspect } : {}), backgroundColor: secondaryBg ? 'var(--color-bg-secondary)' : 'transparent' }}>
+        <Image src={srcLight} alt={alt} fill className={`${styles.fullImageImg} ${styles.themedLight}`} sizes="100vw" style={{ objectFit: 'contain', objectPosition: alignBottom ? 'center bottom' : 'center' }} />
+        <Image src={srcDark}  alt={alt} fill className={`${styles.fullImageImg} ${styles.themedDark}`}  sizes="100vw" style={{ objectFit: 'contain', objectPosition: alignBottom ? 'center bottom' : 'center' }} />
       </div>
       {caption && <figcaption className={styles.caption}>{caption}</figcaption>}
     </figure>

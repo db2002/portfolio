@@ -31,12 +31,7 @@
 }
 
 .heroSub {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-tight);
-  line-height: 1.4;
-  color: var(--color-text-primary);
+  composes: pageTitle from '../../styles/typography.module.css';
   max-width: 780px;
   text-wrap: balance;
   margin-bottom: var(--space-6);
@@ -116,7 +111,6 @@
 
   .heroSub {
     max-width: 100%;
-    font-size: var(--text-xl);
   }
 
   .currentLink:hover {

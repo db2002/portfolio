@@ -4,7 +4,7 @@
   font-size: var(--text-xl);
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-tight);
-  line-height: var(--leading-tight);
+  line-height: var(--leading-heading);
   margin-top: var(--space-24);
   margin-bottom: var(--space-8);
   color: var(--color-text-primary);
@@ -15,7 +15,7 @@
   font-size: var(--text-xl);
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-tight);
-  line-height: var(--leading-tight);
+  line-height: var(--leading-heading);
   margin-top: var(--space-24);
   margin-bottom: var(--space-6);
   color: var(--color-text-primary);
@@ -25,6 +25,7 @@
   font-family: var(--font-display);
   font-size: var(--text-lg);
   font-weight: var(--weight-semibold);
+  line-height: var(--leading-heading);
   margin-top: var(--space-16);
   margin-bottom: var(--space-4);
   color: var(--color-text-primary);
@@ -137,7 +138,7 @@
 
 /* ── Full-width image ───────────────────────────────────── */
 .fullImage {
-  margin: var(--space-16) calc(-1 * var(--space-8));
+  margin: var(--space-16) 0;
 }
 
 .fullImageWrapper {
@@ -275,6 +276,43 @@
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .personaLabel,
+  .personaConnector {
+    display: none;
+  }
+
+  .personaGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    text-align: left;
+  }
+
+  .personaItem {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: var(--space-4);
+    align-content: center;
+    align-items: center;
+  }
+
+  .personaAvatar {
+    grid-row: 1 / span 2;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 0;
+  }
+
+  .personaName {
+    align-self: end;
+  }
+
+  .personaDesc {
+    align-self: start;
+  }
+}
+
 /* ── Takeaway grid ───────────────────────────────────────── */
 .takeawayGrid {
   display: grid;
@@ -304,6 +342,12 @@
   line-height: var(--leading-loose);
   color: var(--color-text-secondary);
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .takeawayGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ── VU Bento grid ───────────────────────────────────────── */
@@ -557,10 +601,5 @@
 @media (max-width: 640px) {
   .imageGrid {
     grid-template-columns: 1fr;
-  }
-
-  .fullImage {
-    margin-left: calc(-1 * var(--space-4));
-    margin-right: calc(-1 * var(--space-4));
   }
 }

@@ -4,7 +4,6 @@
   padding: var(--space-20) var(--space-4) 0;
 }
 
-
 .name {
   font-family: var(--font-body);
   font-size: var(--text-xs) !important;
@@ -16,12 +15,7 @@
 }
 
 .headline {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-tight);
-  line-height: 1.25;
-  color: var(--color-text-primary);
+  composes: pageTitle from '../../styles/typography.module.css';
   max-width: none;
   text-wrap: balance;
 }
@@ -218,10 +212,6 @@
 @media (max-width: 768px) {
   .page {
     padding: var(--space-8) var(--space-4) 0;
-  }
-
-  .headline {
-    font-size: var(--text-xl);
   }
 
   .grid {
